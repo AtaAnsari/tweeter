@@ -1,29 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
+    <!-- Importing Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    
+    <!-- Importing Font awesome -->
+    <script src="https://kit.fontawesome.com/b64a972539.js" crossorigin="anonymous"></script>
+
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/nav.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/main.css">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span class="title">tweeter</span>
+      <span class="new-tweet"> <strong>Write</strong> a new tweet</span>
+      <i class="fas fa-angle-double-down"></i>
     </nav>
+    <header>
+        <div>
+            <img class="profile-pic" src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div>
+            <h2 class="username"> <strong>Amy</strong> Mansell</h2>
+        </div> 
+    </header>
+    
 
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+        <section class="new-tweet">
+            <h2>Compose Tweet</h2>
+            <form action="/tweets/" method="POST"> 
+              <textarea name="text" placeholder="What are you humming about?"></textarea>
+              <div class= "flex-container">
+                <input type="submit" value="Tweet">
+                <span class="counter">140</span>
+              </div>
+            </form>
+          </section>    
+          </main>
   </body>
 </html>

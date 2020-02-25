@@ -1,0 +1,22 @@
+header {
+  height: 400px;
+  width: 100%;
+  background-image: url("../images/asfalt-dark.png");
+  background-color: #D59832;
+  position: relative;
+}
+
+.profile-pic {
+  position: absolute;
+  right: 37%;
+  top: 1%;
+}
+
+.username {
+  position: absolute;
+  right: 40%;
+  top: 65%;
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  color: #ffffff;
+}

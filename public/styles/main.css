@@ -1,0 +1,40 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form textarea {
+  flex-grow: 1;
+  border-bottom: 3px solid;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  background: none;
+  resize: none;
+  line-height: 0.7;
+  font-weight: bold;
+}
+
+.flex-container {
+  margin: 20px 0 20px 0;
+  display: flex;
+}
+
+.flex-container span {
+  flex-grow: 1;
+  text-align: end;
+  font-family: 'Bungee';
+}
+
+.flex-container input {
+  font-family: 'Bungee';
+  background-color: #42549F;
+  border: none;
+  color: white;
+}

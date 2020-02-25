@@ -1,0 +1,27 @@
+nav {
+  width: 100vw;
+  height: 120px;
+  background-color: #4056A1;
+  color: #ffffff;
+  z-index: 1;
+  padding: 1.5em;
+  position: sticky;
+  top: 0;
+  display: flex;
+}
+
+.title {
+  font-family: 'Bungee';
+  flex-grow: 1;
+}
+
+.new-tweet {
+  font-family: 'Source Sans Pro';
+}
+
+i {
+  position: absolute;
+  right: 9%;
+  top: 55%;
+  color: tomato;
+}
