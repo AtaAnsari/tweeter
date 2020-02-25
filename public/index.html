@@ -37,7 +37,7 @@
       <span class="new-tweet"> <strong>Write</strong> a new tweet</span>
       <i class="fas fa-angle-double-down"></i>
     </nav>
-    <header>
+    <header class= page-header>
         <div>
             <img class="profile-pic" src="/images/profile-hex.png"> 
         </div>
@@ -63,17 +63,19 @@
         <section class="tweet-container">
           <article>
             <header>
-              <i class="fas fa-user-circle"></i>
+                <div class="avatar-container">
+                <i class="fas fa-user-circle"></i>
+              </div> 
               <h3 class= "memmber-name">Elmer Lazzeri</h3>
               <h3 class= "tweeter-handle">@Lazzeri</h3>
             </header>
-            <p>Wow! What a tweeterific app!</p>
+            <p class="tweet">Wow! What a tweeterific app!</p>
             <footer>
               <p>10 days ago</p>
               <div class="icons">
-                <i class="fas fa-flag"></i>
-                <i class="fas fa-retweet"></i>
-                <i class="fas fa-heart"></i>
+                <div class="flag"><i class="fas fa-flag"></i></div>
+                <div class="retweet"><i class="fas fa-retweet"></i></div>
+                <div class="heart"><i class="fas fa-heart"></i></div>
               </div>
             </footer>
           </article>

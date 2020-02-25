@@ -38,3 +38,81 @@ form textarea {
   border: none;
   color: white;
 }
+
+.tweet-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+article {
+  border: 3px solid;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Source Sans Pro';
+
+}
+
+article header {
+  display: flex;
+  font-family: 'Source Sans Pro';
+  margin: 0 20px 0 20px;
+}
+
+.avatar-container {
+flex-grow: 0;
+position: relative;
+min-width: 80px; 
+}
+
+.avatar-container i {
+  position: absolute;
+  top: 9%;
+  font-size: 72px;
+  color: rgb(84, 81, 73)
+}
+
+.memmber-name{
+  flex-grow: 0;
+  font-weight: 400;
+}
+
+.tweeter-handle{
+  color: rgba(84, 81, 73, 0.5);
+  flex-grow: 1;
+  text-align: end;
+}
+
+.tweet {
+  margin: 30px 20px 0 20px;
+  font-weight: 800;
+}
+
+article footer {
+  margin: 40px 10px 0 10px;
+  border-top: 3px solid;
+  display: flex;
+}
+
+article footer p {
+  margin-left: 10px;
+}
+
+.icons {
+  width: 100px;
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 25px;
+}
+
+.flag {
+  width: 50px;
+}
+.heart {
+  width: 50px;
+}
+
+.retweet {
+  width: 50px;
+}
