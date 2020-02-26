@@ -6,28 +6,6 @@
 
 $(document).ready(function() {
 
-const tweetData = [{
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-  "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-  "created_at": 1461116232227
-},
-{
-  "user": {
-    "name": "Descartes",
-    "avatars": "https://i.imgur.com/nlhLi3I.png",
-    "handle": "@rd" },
-  "content": {
-    "text": "Je pense , donc je suis"
-  },
-  "created_at": 1461113959088
-}]
-
 const createTweetElement = function(database){
 const userName = database["user"]["name"];
 const tweeterHandle = database["user"]["handle"];
@@ -68,9 +46,36 @@ const renderTweets = function(tweetData) {
 
 }
 
-renderTweets(tweetData)
+// Loads tweets when document is ready
 
-// const $tweet = createTweetElement(tweetData);
-// $('.tweet-container').append($tweet)
-})
+const loadTweets = function(){
+  $.ajax({
+    url: "/tweets",
+    type: "GET",
+    dataType: "JSON"
+  })
+  .then(renderTweets)
+};
+loadTweets()
+
+
+});
+
+// Prevent default browser response of submitting form and instead handling it with an ajax request that will route the post request to /tweets/
+
+$(function() {
+  const $tweet = $('form');
+  $tweet.on('submit', function () {
+    event.preventDefault()
+    $.ajax({
+      type: "POST",
+      url: "/tweets/",
+      data: $tweet.serialize(),
+      success: () => {
+      }
+    });
+  });
+});
+
+
 
