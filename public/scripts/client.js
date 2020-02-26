@@ -6,7 +6,7 @@
 
 $(document).ready(function() {
 
-const tweetData = {
+const tweetData = [{
   "user": {
     "name": "Newton",
     "avatars": "https://i.imgur.com/73hZDYK.png",
@@ -16,7 +16,17 @@ const tweetData = {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
   "created_at": 1461116232227
-}
+},
+{
+  "user": {
+    "name": "Descartes",
+    "avatars": "https://i.imgur.com/nlhLi3I.png",
+    "handle": "@rd" },
+  "content": {
+    "text": "Je pense , donc je suis"
+  },
+  "created_at": 1461113959088
+}]
 
 const createTweetElement = function(database){
 const userName = database["user"]["name"];
@@ -46,7 +56,21 @@ const daysAgo = Math.floor(date/1000/60/60/24)
   `;
   return markup
 };
-const $tweet = createTweetElement(tweetData);
-$('.tweet-container').append($tweet)
+
+const renderTweets = function(tweetData) {
+  // loops through tweets
+  // calls createTweetElement for each tweet
+  // takes return value and appends it to the tweets container
+  for(const tweet of tweetData) {
+    let $tweet = createTweetElement(tweet)
+    $('.tweet-container').append($tweet)
+  }
+
+}
+
+renderTweets(tweetData)
+
+// const $tweet = createTweetElement(tweetData);
+// $('.tweet-container').append($tweet)
 })
 
