@@ -53,6 +53,7 @@ article {
   display: flex;
   flex-direction: column;
   font-family: 'Source Sans Pro';
+  margin-bottom: 20px;
 
 }
 
@@ -124,21 +125,22 @@ article footer p {
 
 /* Managing the hover state */
 
-.tweet-container:hover .tweeter-handle {
+article:hover .tweeter-handle {
   display: inline-block;
 }
 
-.tweet-container:hover {
+article:hover {
   box-shadow: 5px 10px #888888;
+  margin-bottom: 20px;
 }
 
-.tweet-container:hover article footer {
+article:hover footer {
   margin: 40px 10px 0 10px;
   border-top: 3px solid;
   display: flex;
 }
 
-.tweet-container:hover .avatar-container i {
+article:hover  .avatar-container i {
   position: absolute;
   top: 9%;
   font-size: 72px;
@@ -146,7 +148,7 @@ article footer p {
   color: rgb(40, 38, 36)
 }
 
-.tweet-container:hover article {
+article:hover {
   border: 3px solid;
   display: flex;
   flex-direction: column;
