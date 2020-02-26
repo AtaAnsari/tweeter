@@ -58,7 +58,7 @@ const createTweetElement = function(database){
         <h3 class= "memmber-name">${userName}</h3>
         <h3 class= "tweeter-handle">${tweeterHandle}</h3>
       </header>
-      <p class="tweet">${tweet}</p>
+      <p class="tweet">${escape(tweet)}</p>
       <footer>
         <p>${daysAgo} days ago</p>
         <div class="icons">
@@ -106,4 +106,12 @@ const isNull = function ($tweet) {
   if(($tweet.find("textarea").val().length) === 0) {
     return true
   }
+}
+
+// escape function to prevent XSS
+
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 }
