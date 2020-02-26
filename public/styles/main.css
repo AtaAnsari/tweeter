@@ -1,3 +1,5 @@
+/* Styling Main Container */
+
 .container {
   width: 90%;
   margin: 0 auto;
@@ -38,6 +40,8 @@ form textarea {
   border: none;
   color: white;
 }
+
+/* Styling Tweet */
 
 .tweet-container {
   margin-top: 20px;
@@ -80,6 +84,7 @@ min-width: 80px;
   color: rgba(84, 81, 73, 0.5);
   flex-grow: 1;
   text-align: end;
+  display: none;
 }
 
 .tweet {
@@ -89,7 +94,7 @@ min-width: 80px;
 
 article footer {
   margin: 40px 10px 0 10px;
-  border-top: 3px solid;
+  border-top: 2px solid;
   display: flex;
 }
 
@@ -115,4 +120,37 @@ article footer p {
 
 .retweet {
   width: 50px;
+}
+
+/* Managing the hover state */
+
+.tweet-container:hover .tweeter-handle {
+  display: inline-block;
+}
+
+.tweet-container:hover {
+  box-shadow: 5px 10px #888888;
+}
+
+.tweet-container:hover article footer {
+  margin: 40px 10px 0 10px;
+  border-top: 3px solid;
+  display: flex;
+}
+
+.tweet-container:hover .avatar-container i {
+  position: absolute;
+  top: 9%;
+  font-size: 72px;
+  font-weight: bold;
+  color: rgb(40, 38, 36)
+}
+
+.tweet-container:hover article {
+  border: 3px solid;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Source Sans Pro';
+  font-weight: bold;
+
 }
