@@ -54,12 +54,13 @@ const loadTweets = function(){
     type: "GET",
     dataType: "JSON"
   })
-  .then(renderTweets)
+  .then((data) => {renderTweets(data)})
 };
 loadTweets()
 
 
 });
+
 
 // Prevent default browser response of submitting form and instead handling it with an ajax request that will route the post request to /tweets/
 
@@ -67,15 +68,35 @@ $(function() {
   const $tweet = $('form');
   $tweet.on('submit', function () {
     event.preventDefault()
-    $.ajax({
-      type: "POST",
-      url: "/tweets/",
-      data: $tweet.serialize(),
-      success: () => {
-      }
-    });
+    console.log($tweet.serialize(), $tweet.serialize().length);
+    if(isTooLong($tweet)) {
+      alert("Your tweet is too long! Please shorten it.")
+    } else if(isNull($tweet)) { 
+      alert("Your Tweet is empty!")
+    } else {
+      $.ajax({
+        type: "POST",
+        url: "/tweets/",
+        data: $tweet.serialize(),
+        success: () => {
+        }
+      });
+    }
   });
 });
 
+// Helper Functions:
 
+// determining if the tweet is too long or not entered at all.
 
+const isTooLong = function ($tweet) {
+  if(($tweet.serialize().length -5) > 140) {
+    return true
+  }
+};
+
+const isNull = function ($tweet) {
+  if(($tweet.serialize().length -5) === 0) {
+    return true
+  }
+}
