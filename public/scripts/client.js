@@ -68,7 +68,7 @@ $(function() {
   const $tweet = $('form');
   $tweet.on('submit', function () {
     event.preventDefault()
-    console.log($tweet.serialize(), $tweet.serialize().length);
+    console.log($tweet.find("textarea").val());
     if(isTooLong($tweet)) {
       alert("Your tweet is too long! Please shorten it.")
     } else if(isNull($tweet)) { 
@@ -90,13 +90,13 @@ $(function() {
 // determining if the tweet is too long or not entered at all.
 
 const isTooLong = function ($tweet) {
-  if(($tweet.serialize().length -5) > 140) {
+  if(($tweet.find("textarea").val().length) > 140) {
     return true
   }
 };
 
 const isNull = function ($tweet) {
-  if(($tweet.serialize().length -5) === 0) {
+  if(($tweet.find("textarea").val().length) === 0) {
     return true
   }
 }
