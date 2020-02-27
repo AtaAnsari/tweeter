@@ -48,6 +48,7 @@ form textarea {
   cursor: pointer;
 }
 
+
 /* Styling Tweet */
 
 .tweet-container {
@@ -117,6 +118,7 @@ article footer p {
   display: flex;
   justify-content: flex-end;
   padding-top: 25px;
+  display: none;
 }
 
 .flag {
@@ -159,6 +161,11 @@ article:hover {
 article:hover .memmber-name {
   font-weight: bold
 }
+
+article:hover .icons {
+  display: flex;
+}
+
 
 .too-long{
   font-family: 'Source Sans Pro';
