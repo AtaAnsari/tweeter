@@ -4,18 +4,14 @@
   background-image: url("../images/asfalt-dark.png");
   background-color: #D59832;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.profile-pic {
-  position: absolute;
-  right: 37%;
-  top: 1%;
-}
 
 .username {
-  position: absolute;
-  right: 40%;
-  top: 65%;
   font-family: 'Source Sans Pro';
   font-weight: 400;
   color: #ffffff;
@@ -24,3 +20,4 @@
 .avatar-container img{
   padding-top: 10px;
 }
+
