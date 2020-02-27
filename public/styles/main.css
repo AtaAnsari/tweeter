@@ -43,6 +43,9 @@ form textarea {
   border: none;
   color: white;
 }
+.flex-container input:hover {
+  cursor: pointer;
+}
 
 /* Styling Tweet */
 
@@ -172,4 +175,13 @@ article:hover .memmber-name {
   border: 3px solid red;
   text-align: center;
   display: none;
+}
+
+/* establishing tablet version and up*/
+@media(min-width: 768px) {
+  body {
+    color: 
+    #545149;
+    font-size: 30px;
+  }
 }

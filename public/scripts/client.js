@@ -46,19 +46,22 @@ loadTweets()
         }
       })
   });
-// creating the toggle feature
-  const $toggle = $('nav i');
-  const $tweetForm = $('.new-tweet')
 
-  $toggle.click(function(){
+const $toggle = $('nav i');
+const $tweetForm = $('.new-tweet')
+const $scrollArrow = $('.scroll-arrow')
+// scrolling to the top of the page when the scroll up arrow is clicked
+// REFERENCE: PLEASE NOTE THAT I OBTAINED THE SOURCE CODE FOR THIS ANIMATION FROM HERE: https://stackoverflow.com/questions/1144805/scroll-to-the-top-of-the-page-using-javascript
+
+$scrollArrow.click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});  
+
+// toggling the write a tweet form
+    $toggle.click(function(){
     $tweetForm.slideToggle();
   });
-  
-  $toggle.hover(() => {
-    $toggle.css('top', '68%' )
-  }, () => {
-    $toggle.css('top', '55%' )
-  }) 
 
   });
 

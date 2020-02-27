@@ -21,3 +21,10 @@
   padding-top: 10px;
 }
 
+form textarea {
+  font-family: inherit;
+  font-size: 79%;
+  line-height: 1.15;
+  margin: 0;
+
+}

@@ -21,15 +21,51 @@ body {
 body {
   color: #545149;
   background-color: #f4f1ec;
-  font-size: 24px;
+  font-size: 30px;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+/* styling the scroll arrow */
+.scroll-arrow {
+  color:tomato;
+  position: fixed;
+  bottom: 5%;
+  right: 50%;
+  z-index: 2;
+
+}
+
+.scroll-arrow i {
+  font-size: 24px;
+}
+
+
+.scroll-arrow {
+  cursor: pointer;
+}
+/* REFERENCE: PLEASE NOTE THAT I DID NOT WRITE THE CODE FOR THIS ANIMATION, THE SOURCE CODE CAN BE FOUND HERE: https://code-boxx.com/simple-css-bounce-effect/ */
+
+@keyframes bounce { 
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-25px); }
+}
+.scroll-arrow {
+  animation: bounce 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+/* establishing mobile font size */
+body {
+
+  color: #545149;
+  background-color:#f4f1ec;
+  font-size: 20px;
+}
 
 /* establishing layout for the desktop version */
-
 @media(min-width: 1024px) {
   .header-main-container {
     display: flex;

@@ -5,28 +5,49 @@ nav {
   color: #ffffff;
   z-index: 1;
   padding: 1.5em;
-  position: sticky;
-  top: 0;
   display: flex;
 }
 
 .title {
   font-family: 'Bungee';
   flex-grow: 1;
+  font-size: 20px;
+  padding-top: 20px;
 }
 
 .new-one{
   font-family: 'Source Sans Pro';
+  font-size: 20px;
+  text-align: right;
 }
 
 nav i {
   color: tomato;
-  font-size: 33px;
+  font-size: 24px;
+  position: absolute;
+  top: 64px;
+  right: 85px;
+  z-index: 2;
+
 }
+
+
 
 nav div i:hover {
   cursor: pointer;
 }
+/* REFERENCE: PLEASE NOTE THAT I DID NOT WRITE THE CODE FOR THIS ANIMATION, THE SOURCE CODE CAN BE FOUND HERE: https://code-boxx.com/simple-css-bounce-effect/ */
+
+@keyframes bounce { 
+  0% { transform: translateY(0); }
+  100% { transform: translateY(10px); }
+}
+nav div i {
+  animation: bounce 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
 
 nav div {
   display: flex;
@@ -35,11 +56,79 @@ nav div {
   align-items: center;
 }
 
-/* establishing style for the desktop version */
 
+
+/* establishing style for the tablet version */
+
+@media (min-width : 768px) {
+  nav {
+    height: 120px;
+    background-image: url("../images/asfalt-dark.png");
+    background-color: #D59832;
+    color: #ffffff;
+    z-index: 1;
+    padding: 1.5em;
+    position: sticky;
+    top: 0;
+    display: flex;
+  }
+  nav i {
+    color: tomato;
+    font-size: 33px;
+    position: relative;
+    z-index: 0;
+  }
+  .new-one{
+    font-family: 'Source Sans Pro';
+    font-size: 15px;
+  }
+
+  nav i {
+    color: tomato;
+    font-size: 33px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+  .new-one{
+    font-family: 'Source Sans Pro';
+    font-size: 30px;
+  }
+
+  nav i {
+    color: tomato;
+    font-size: 33px;
+    position: relative;
+  }
+
+  .title {
+    font-family: 'Bungee';
+    flex-grow: 1;
+    font-size: 30px;
+    padding-top: 0;
+  }
+  }
+
+  
+/* establishing style for the desktop version */
 @media (min-width : 1024px) {
 nav {
   background-color: #4056A1;
   background-image: none;
 }
+
+.title {
+  font-family: 'Bungee';
+  flex-grow: 1;
+  font-size: 30;
+  padding-top: 0;
 }
+nav i {
+  color: tomato;
+  font-size: 33px;
+  position: relative;
+}
+}
+
+
