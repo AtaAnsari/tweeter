@@ -33,35 +33,42 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="title">tweeter</span>
-      <span class="new-one"> <strong>Write</strong> a new tweet</span>
-      <i class="fas fa-angle-double-down"></i>
+      <div>
+        <span class="new-one"> <strong>Write</strong> a new tweet</span>
+        <i class="fas fa-angle-double-down"></i>
+      </div>
     </nav>
-    <header class= page-header>
-        <div>
-            <img class="profile-pic" src="/images/profile-hex.png"> 
-        </div>
-        <div>
-            <h2 class="username"> <strong>Amy</strong> Mansell</h2>
-        </div>
-        
-    </header>
-  
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-        <section class="new-tweet">
-            <h2>Compose Tweet</h2>
-            <p class= "too-long">Your tweet is too long! You must have less than 140 characters in your tweet.</p>
-            <p class="null">Your tweet is empty! You can have up to 140 characters in your tweet.</p>
-            <form action="/tweets/" method="POST"> 
-              <textarea name="text" placeholder="What are you humming about?"></textarea>
-              <div class= "flex-container">
-                <input type="submit" value="Tweet">
-                <span class="counter">140</span>
-              </div>
-            </form>
-        </section>
-        <section class="tweet-container">
-        </section>    
-    </main>
+    <div class="header-main-container">
+      <div class="header-container">
+        <header class= page-header>
+            <div>
+                <img class="profile-pic" src="/images/profile-hex.png"> 
+            </div>
+            <div>
+                <h2 class="username"> <strong>Amy</strong> Mansell</h2>
+            </div>
+            
+        </header>
+      </div>
+      <!-- Page-specific (main) content here -->
+      <div class="main-container">
+        <main class="container">
+          <section class="new-tweet">
+              <h2>Compose Tweet</h2>
+              <p class= "too-long">Your tweet is too long! You must have less than 140 characters in your tweet.</p>
+              <p class="null">Your tweet is empty! You can have up to 140 characters in your tweet.</p>
+              <form action="/tweets/" method="POST"> 
+                <textarea name="text" placeholder="What are you humming about?"></textarea>
+                <div class= "flex-container">
+                  <input type="submit" value="Tweet">
+                  <span class="counter">140</span>
+                </div>
+              </form>
+          </section>
+          <section class="tweet-container">
+          </section>    
+        </main>
+      </div>
+    </div>
   </body>
 </html>

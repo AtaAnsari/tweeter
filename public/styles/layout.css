@@ -28,3 +28,18 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+/* establishing layout for the desktop version */
+
+@media(min-width: 1024px) {
+  .header-main-container {
+    display: flex;
+  }
+  .header-container {
+    flex: 1;
+    margin: 35px 0 0 20px;
+  }
+  .main-container {
+    flex: 2;
+  }
+  
+}

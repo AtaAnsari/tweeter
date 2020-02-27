@@ -1,6 +1,7 @@
 nav {
   height: 120px;
-  background-color: #4056A1;
+  background-image: url("../images/asfalt-dark.png");
+  background-color: #D59832;
   color: #ffffff;
   z-index: 1;
   padding: 1.5em;
@@ -19,13 +20,26 @@ nav {
 }
 
 nav i {
-  position: absolute;
-  right: 9%;
-  top: 55%;
   color: tomato;
   font-size: 33px;
 }
 
-nav i:hover {
+nav div i:hover {
   cursor: pointer;
+}
+
+nav div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* establishing style for the desktop version */
+
+@media (min-width : 1024px) {
+nav {
+  background-color: #4056A1;
+  background-image: none;
+}
 }
