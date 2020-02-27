@@ -20,3 +20,7 @@
   font-weight: 400;
   color: #ffffff;
 }
+
+.avatar-container img{
+  padding-top: 10px;
+}

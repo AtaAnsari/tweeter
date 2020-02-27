@@ -35,7 +35,25 @@ loadTweets()
     }
   });
 
-});
+  const $toggle = $('nav i');
+  const $tweetForm = $('.new-tweet')
+  // $toggle.toggle(() => {
+  //   $tweetForm.css('position', 'absolute' )
+  //   $tweetForm.css('top', '-13%' )
+  // }, () => {
+  //   $tweetForm.css('position', 'relative' )
+  // })
+  $toggle.click(function(){
+    $tweetForm.slideToggle();
+  });
+  
+  $toggle.hover(() => {
+    $toggle.css('top', '68%' )
+  }, () => {
+    $toggle.css('top', '55%' )
+  }) 
+
+  });
 
 
 
@@ -49,12 +67,13 @@ const createTweetElement = function(database){
   const tweet = database["content"]["text"];
   const date = Date.now() - database["created_at"]
   const daysAgo = Math.floor(date/1000/60/60/24)
+  const avatar = database["user"]["avatars"]
     const markup = `
     <article>
       <header>
           <div class="avatar-container">
-          <i class="fas fa-user-circle"></i>
-        </div> 
+          <img src="${avatar}" alt="user-image">
+          </div> 
         <h3 class= "memmber-name">${userName}</h3>
         <h3 class= "tweeter-handle">${tweeterHandle}</h3>
       </header>
@@ -115,3 +134,4 @@ const escape =  function(str) {
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
+

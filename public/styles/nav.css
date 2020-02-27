@@ -14,7 +14,7 @@ nav {
   flex-grow: 1;
 }
 
-.new-tweet {
+.new-one{
   font-family: 'Source Sans Pro';
 }
 
@@ -23,4 +23,5 @@ nav i {
   right: 9%;
   top: 55%;
   color: tomato;
+  font-size: 33px;
 }
