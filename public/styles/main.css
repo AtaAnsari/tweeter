@@ -93,7 +93,7 @@ min-width: 80px;
   color: rgba(84, 81, 73, 0.5);
   flex-grow: 1;
   text-align: end;
-  display: none;
+
 }
 
 .tweet {
@@ -134,9 +134,6 @@ article footer p {
 
 /* Managing the hover state */
 
-article:hover .tweeter-handle {
-  display: inline-block;
-}
 
 article:hover {
   box-shadow: 5px 10px #888888;

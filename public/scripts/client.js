@@ -30,7 +30,9 @@ loadTweets()
 
   $tweet.on('submit', function () {
     event.preventDefault()
-
+    if(isNull($tweet)) {
+      $null.show()
+    } else {
       $.ajax({
         type: "POST",
         url: "/tweets/",
@@ -45,6 +47,8 @@ loadTweets()
           .then((data) => {renderTweets(data)})
         }
       })
+    }
+      
   });
 
 const $toggle = $('nav i');
@@ -54,6 +58,8 @@ const $scrollArrow = $('.scroll-arrow')
 // REFERENCE: PLEASE NOTE THAT I OBTAINED THE SOURCE CODE FOR THIS ANIMATION FROM HERE: https://stackoverflow.com/questions/1144805/scroll-to-the-top-of-the-page-using-javascript
 
 $scrollArrow.click(function() {
+  $tweetForm.slideToggle();
+  $tweet.find('textarea').focus();
   $("html, body").animate({ scrollTop: 0 }, "slow");
   return false;
 });  
@@ -61,6 +67,7 @@ $scrollArrow.click(function() {
 // toggling the write a tweet form
     $toggle.click(function(){
     $tweetForm.slideToggle();
+    $tweet.find('textarea').focus();
   });
 
 });
