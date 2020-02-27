@@ -13,6 +13,7 @@ form {
 
 .new-tweet {
   font-family: 'Source Sans Pro';
+  display: none;
 }
 form textarea {
   flex-grow: 1;

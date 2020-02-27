@@ -31,7 +31,7 @@ body {
 .scroll-arrow {
   color:tomato;
   position: fixed;
-  bottom: 5%;
+  bottom: 3%;
   right: 50%;
   z-index: 2;
 

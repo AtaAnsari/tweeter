@@ -107,7 +107,7 @@ const createTweetElement = function(database){
     // takes return value and appends it to the tweets container
     for(const tweet of tweetData) {
       let $tweet = createTweetElement(tweet)
-      $('.tweet-container').append($tweet)
+      $('.tweet-container').prepend($tweet)
     }
   
   }
