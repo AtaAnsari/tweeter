@@ -9,15 +9,28 @@ $(document).ready(function() {
 
 loadTweets()
 
-// Fetching and rendering tweets 
+// Fetching and rendering tweets as well as error responses
   const $tweet = $('form');
+  const $toLong = $('.too-long')
+  const $null = $('.null')
+  const $textarea = $("form textarea")
+
+  $textarea.on("keyup", () => {
+    if(isTooLong($tweet)) {
+      $toLong.show()
+      $null.hide()
+    } else if(isNull($tweet)) { 
+      $toLong.hide()
+      $null.show()
+    } else {
+      $toLong.hide()
+      $null.hide()
+    }
+  })
+
   $tweet.on('submit', function () {
     event.preventDefault()
-    if(isTooLong($tweet)) {
-      alert("Your tweet is too long! Please shorten it.")
-    } else if(isNull($tweet)) { 
-      alert("Your Tweet is empty!")
-    } else {
+
       $.ajax({
         type: "POST",
         url: "/tweets/",
@@ -32,17 +45,11 @@ loadTweets()
           .then((data) => {renderTweets(data)})
         }
       })
-    }
   });
-
+// creating the toggle feature
   const $toggle = $('nav i');
   const $tweetForm = $('.new-tweet')
-  // $toggle.toggle(() => {
-  //   $tweetForm.css('position', 'absolute' )
-  //   $tweetForm.css('top', '-13%' )
-  // }, () => {
-  //   $tweetForm.css('position', 'relative' )
-  // })
+
   $toggle.click(function(){
     $tweetForm.slideToggle();
   });

@@ -25,3 +25,7 @@ nav i {
   color: tomato;
   font-size: 33px;
 }
+
+nav i:hover {
+  cursor: pointer;
+}

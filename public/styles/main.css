@@ -143,14 +143,6 @@ article:hover footer {
   display: flex;
 }
 
-article:hover  .avatar-container i {
-  position: absolute;
-  top: 9%;
-  font-size: 72px;
-  font-weight: bold;
-  color: rgb(40, 38, 36)
-}
-
 article:hover {
   border: 3px solid;
   display: flex;
@@ -158,4 +150,26 @@ article:hover {
   font-family: 'Source Sans Pro';
   font-weight: bold;
 
+}
+
+article:hover .memmber-name {
+  font-weight: bold
+}
+
+.too-long{
+  font-family: 'Source Sans Pro';
+  font-weight: bold;
+  color: red;
+  border: 3px solid red;
+  text-align: center;
+  display: none;
+}
+
+.null{
+  font-family: 'Source Sans Pro';
+  font-weight: bold;
+  color: red;
+  border: 3px solid red;
+  text-align: center;
+  display: none;
 }
