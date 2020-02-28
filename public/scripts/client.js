@@ -46,6 +46,9 @@ $(document).ready(function() {
             dataType: "JSON",
             success: () => {
               $('.tweet-container').empty();
+              $tweet.find('textarea').val('');
+              $tweet.find(".counter").text(140)
+
             }
           })
             .then((data) => {
