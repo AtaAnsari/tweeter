@@ -15,7 +15,7 @@ loadTweets()
   const $null = $('.null')
   const $textarea = $("form textarea")
 
-  $textarea.on("keyup", () => {
+  $textarea.on("input", () => {
     if(isTooLong($tweet)) {
       $toLong.show()
       $null.hide()
@@ -30,7 +30,9 @@ loadTweets()
 
   $tweet.on('submit', function () {
     event.preventDefault()
-    if(isNull($tweet)) {
+    if(isTooLong($tweet)){
+      $toLong.show()
+    } else if(isNull($tweet)) {
       $null.show()
     } else {
       $.ajax({
@@ -54,7 +56,8 @@ loadTweets()
 const $toggle = $('nav i');
 const $tweetForm = $('.new-tweet')
 const $scrollArrow = $('.scroll-arrow')
-// scrolling to the top of the page when the scroll up arrow is clicked
+// scrolling to the top of the page when the scroll up arrow is clicked. This also brings the textarea into focus
+
 // REFERENCE: PLEASE NOTE THAT I OBTAINED THE SOURCE CODE FOR THIS ANIMATION FROM HERE: https://stackoverflow.com/questions/1144805/scroll-to-the-top-of-the-page-using-javascript
 
 $scrollArrow.click(function() {
