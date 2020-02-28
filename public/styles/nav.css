@@ -36,7 +36,7 @@ nav i {
 nav div i:hover {
   cursor: pointer;
 }
-/* REFERENCE: PLEASE NOTE THAT I DID NOT WRITE THE CODE FOR THIS ANIMATION, THE SOURCE CODE CAN BE FOUND HERE: https://code-boxx.com/simple-css-bounce-effect/ */
+/* REFERENCE: PLEASE NOTE THAT THE SOURCE CODE FOR THIS ANIMATION CAN BE FOUND HERE: https://code-boxx.com/simple-css-bounce-effect/ */
 
 @keyframes bounce { 
   0% { transform: translateY(0); }

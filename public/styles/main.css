@@ -152,7 +152,6 @@ article:hover {
   flex-direction: column;
   font-family: 'Source Sans Pro';
   font-weight: bold;
-
 }
 
 article:hover .memmber-name {
@@ -163,7 +162,9 @@ article:hover .icons {
   display: flex;
 }
 
-
+.tweet {
+  word-break: break-word;
+}
 .too-long{
   font-family: 'Source Sans Pro';
   font-weight: bold;

@@ -1,8 +1,4 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+
 html {
   box-sizing: border-box;
 }
@@ -24,9 +20,6 @@ body {
   font-size: 30px;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 /* styling the scroll arrow */
 .scroll-arrow {
   color:tomato;
@@ -45,7 +38,7 @@ body {
 .scroll-arrow {
   cursor: pointer;
 }
-/* REFERENCE: PLEASE NOTE THAT I DID NOT WRITE THE CODE FOR THIS ANIMATION, THE SOURCE CODE CAN BE FOUND HERE: https://code-boxx.com/simple-css-bounce-effect/ */
+/* REFERENCE: PLEASE NOTE THAT THE SOURCE CODE FOR THIS ANIMATION CAN BE FOUND HERE: https://code-boxx.com/simple-css-bounce-effect/ */
 
 @keyframes bounce { 
   0% { transform: translateY(0); }
@@ -62,7 +55,7 @@ body {
 
   color: #545149;
   background-color:#f4f1ec;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* establishing layout for the desktop version */
