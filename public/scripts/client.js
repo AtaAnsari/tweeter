@@ -154,7 +154,7 @@ const isTooLong = function($tweet) {
 };
 
 const isNull = function($tweet) {
-  if (($tweet.find("textarea").val().length) === 0) {
+  if (($tweet.find("textarea").val().trim().length) === 0) {
     return true;
   }
 };
